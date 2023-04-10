@@ -2,7 +2,7 @@ library(shiny)
 library(leaflet)
 
 ui <- fluidPage(
-  titlePanel("Super Complex Machine Learning AI Decision Maker 9000"),
+  titlePanel("Super Complex Machine Learning AI Birthday Decision Maker 9000"),
   
   sidebarLayout(
     sidebarPanel(
@@ -61,7 +61,7 @@ server <- function(input, output){
     if(weather =="Yes, I mind, need to look seggsi for the afternoon"){
       optiontitle <- "Option 3: Wet Weather Option"
       mytext1 <- "1. Meet at 10:30 at Spitalfields City Farm"
-      mytext2 <- "2. Backyard Market"
+      mytext2 <- "2. Brick Lane + Brick Lane Bookshop"
       mytext3 <- "3. Barbican Conservatory (because ik you like it a lot xD)"
       mytext4 <- "4. Food somewhere (can decide when we are there)"
 
@@ -79,7 +79,7 @@ server <- function(input, output){
                               c(point1_lat_demo, point2_lat_demo,
                                 point3_lat_demo, point4_lat_demo), name = c("1. Start Here: Spitalfields City Farm",
                                                            "2. Backyard Market",
-                                                           "3. Barbican Conservatory",
+                                                           "3. Brick Lane + Brick Lane Bookshop",
                                                            "4. Food somewhere (can decide later)"))
       
       
@@ -209,7 +209,7 @@ server <- function(input, output){
       point2_long_demo <- -0.05754207286302285
       point3_lat_demo <-51.53608270390507
       point3_long_demo <- -0.0654282811430612
-      point_4_lat_demo <- 51.5246602532804
+      point4_lat_demo <- 51.5246602532804
       point4_long_demo <- -0.13400527822771696
       
       
@@ -296,27 +296,18 @@ server <- function(input, output){
                      labelOptions = labelOptions(noHide = F)) %>%
           addPolylines(data = df_demo, lng = ~long, lat = ~lat)
       })
-    } else if(finish=="I don't care" && travel==1 && energy==1 && adventure==1 && weather=="Yes, I mind, need to look seggsi for the afternoon"){
-      optiontitle <- "LOL you broke it"
-      mytext1 <- "hahahah idek what this is"
-      mytext2 <- "sorry oopsie machine learning booboo"
-      mytext3 <- ""
-      mytext4 <- ""
+    } else if(finish=="I don't care" && travel==3 && energy==3 && adventure==3){
+      optiontitle <- "Option 2: Face Your Fears grrrrr >:("
+      mytext1 <- "1. Meet at Santander bikes outside Archaeology at 09:30"
+      mytext2 <- "2a. Cycling Scenic Route: UCL> Temple > Embankment/Westminster > cross at Westminster bridge > south bank > millennium bridge > st Paul's cathedral > UCL"
+      mytext3 <- "2b. Cycling Beginner Friendly Route:  UCL > regents park > primrose hill > Camden > UCL."
+      mytext4 <- "3. Food - depends on where we end up"
       
-      point1_lat_demo <- 51.55637232098641
-      point1_long_demo <- -0.15110095937060003
-      point2_lat_demo <- 51.55573608135147
-      point2_long_demo <- -0.16669033053456359
-      point3_lat_demo <-51.57153490435442
-      point3_long_demo <- 0.16742747790985205
+      point1_lat_demo <-51.525017580067924
+      point1_long_demo <- -0.13168847790982494
       
-      
-      df_demo <- data.frame(long=c(point1_long_demo, point2_long_demo,
-                                   point3_long_demo), lat =
-                              c(point1_lat_demo, point2_lat_demo,
-                                point3_lat_demo), name = c("",
-                                                           "",
-                                                           ""))
+      df_demo <- data.frame(long=c(point1_long_demo), lat =
+                              c(point1_lat_demo), name = c("1. Start Here: UCL Archaeology"))
       
       
       output$optiontitle <- renderText({
