@@ -43,6 +43,7 @@ ui <- fluidPage(
       textOutput("text2"),
       textOutput("text3"),
       textOutput("text4"),
+      textOutput("text5"),
       leafletOutput("mymap")
     )
   )
@@ -62,8 +63,9 @@ server <- function(input, output){
       optiontitle <- "Option 3: Wet Weather Option"
       mytext1 <- "1. Meet at 10:30 at Spitalfields City Farm"
       mytext2 <- "2. Brick Lane + Brick Lane Bookshop"
-      mytext3 <- "3. Barbican Conservatory (because ik you like it a lot xD)"
-      mytext4 <- "4. Food somewhere (can decide when we are there)"
+      mytext3 <- "3. Barbican (because ik you like it a lot xD)"
+      mytext4 <- "4. Pies @ Pieminster Leather Ln"
+      mytext5 <- "5. The Post Building Rooftop"
 
       point1_lat_demo <- 51.522101183769436
       point1_long_demo <- -0.06744764091891219
@@ -71,16 +73,19 @@ server <- function(input, output){
       point2_long_demo <- -0.07111211519160646
       point3_lat_demo <-51.52010311831101
       point3_long_demo <- -0.09318355937196572
-      point4_lat_demo <- 51.520268636313745
-      point4_long_demo <- -0.09794396213185157
+      point4_lat_demo <- 51.52181787576912
+      point4_long_demo <- -0.11030531809904102
+      point5_lat_demo <- 51.516838731212154
+      point5_long_demo <- -0.12460845945644308
       
       df_demo <- data.frame(long=c(point1_long_demo, point2_long_demo,
-                                   point3_long_demo, point4_long_demo), lat =
+                                   point3_long_demo, point4_long_demo, point5_long_demo), lat =
                               c(point1_lat_demo, point2_lat_demo,
-                                point3_lat_demo, point4_lat_demo), name = c("1. Start Here: Spitalfields City Farm",
-                                                           "2. Backyard Market",
-                                                           "3. Brick Lane + Brick Lane Bookshop",
-                                                           "4. Food somewhere (can decide later)"))
+                                point3_lat_demo, point4_lat_demo, point5_lat_demo), name = c("1. Start Here: Spitalfields City Farm",
+                                                           "2. Brick Lane + Brick Lane Bookshop",
+                                                           "3. Barbican",
+                                                           "4. Pieminster Leather Lane",
+                                                           "5. The Post Building Rooftop"))
       
       
       output$optiontitle <- renderText({
@@ -97,6 +102,9 @@ server <- function(input, output){
       })
       output$text4 <- renderText({
         toString(mytext4)
+      })
+      output$text5 <- renderText({
+        toString(mytext5)
       })
       
       output$mymap <- renderLeaflet({
