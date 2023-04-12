@@ -64,7 +64,7 @@ server <- function(input, output){
       mytext1 <- "1. Meet at 10:30 at Spitalfields City Farm"
       mytext2 <- "2. Brick Lane + Brick Lane Bookshop"
       mytext3 <- "3. Barbican (because ik you like it a lot xD)"
-      mytext4 <- "4. Pies @ Pieminster Leather Ln"
+      mytext4 <- "4. Food somewhere?"
       mytext5 <- "5. The Post Building Rooftop"
 
       point1_lat_demo <- 51.522101183769436
@@ -84,7 +84,7 @@ server <- function(input, output){
                                 point3_lat_demo, point4_lat_demo, point5_lat_demo), name = c("1. Start Here: Spitalfields City Farm",
                                                            "2. Brick Lane + Brick Lane Bookshop",
                                                            "3. Barbican",
-                                                           "4. Pieminster Leather Lane",
+                                                           "4. Food somewhere",
                                                            "5. The Post Building Rooftop"))
       
       
@@ -123,6 +123,7 @@ server <- function(input, output){
       mytext2 <- "2a. Cycling Scenic Route: UCL> Temple > Embankment/Westminster > cross at Westminster bridge > south bank > millennium bridge > st Paul's cathedral > UCL"
       mytext3 <- "2b. Cycling Beginner Friendly Route:  UCL > regents park > primrose hill > Camden > UCL."
       mytext4 <- "3. Food - depends on where we end up"
+      mytext5 <- ""
       
       point1_lat_demo <-51.525017580067924
       point1_long_demo <- -0.13168847790982494
@@ -162,6 +163,7 @@ server <- function(input, output){
       mytext2 <- "2. Swimming!!"
       mytext3 <- "3. Food at. Polly's"
       mytext4 <- "4. Kenwood house "
+      mytext5 <- ""
       
       point1_lat_demo <-51.55637232098641
       point1_long_demo <- -0.15110095937060003
@@ -210,6 +212,7 @@ server <- function(input, output){
       mytext2 <- "2. Swimming!!"
       mytext3 <- "3. Food at. Finch Cafe"
       mytext4 <- "4. Long walk back to campus along the canal (1hr ish)"
+      mytext5 <- ""
       
       point1_lat_demo <-51.54242180517086
       point1_long_demo <- -0.06150461704325338
@@ -261,6 +264,7 @@ server <- function(input, output){
       mytext2 <- "2. Swimming!!"
       mytext3 <- "3. Food at. Finch Cafe"
       mytext4 <- "4. Long walk back to campus along the canal (1hr ish)"
+      mytext5 <- ""
       
       point1_lat_demo <-51.54242180517086
       point1_long_demo <- -0.06150461704325338
@@ -310,6 +314,7 @@ server <- function(input, output){
       mytext2 <- "2a. Cycling Scenic Route: UCL> Temple > Embankment/Westminster > cross at Westminster bridge > south bank > millennium bridge > st Paul's cathedral > UCL"
       mytext3 <- "2b. Cycling Beginner Friendly Route:  UCL > regents park > primrose hill > Camden > UCL."
       mytext4 <- "3. Food - depends on where we end up"
+      mytext5 <- ""
       
       point1_lat_demo <-51.525017580067924
       point1_long_demo <- -0.13168847790982494
@@ -347,6 +352,7 @@ server <- function(input, output){
       mytext2 <- "2. Swimming!!"
       mytext3 <- "3. Food at. Polly's"
       mytext4 <- "4. Kenwood house "
+      mytext5 <- ""
       
       point1_lat_demo <-51.55637232098641
       point1_long_demo <- -0.15110095937060003
